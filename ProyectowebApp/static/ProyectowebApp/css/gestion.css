@@ -57,12 +57,13 @@ p {
   font-size: 1rem;
   font-weight: 800;
   padding-bottom:.5rem;
-
+  padding-top:.7rem;
+  line-height: 1.5rem;
 }
 
 .section-heading .section-heading-lower {
   display: block;
-  font-size: 3rem;
+  font-size: 2.7rem;
   font-weight: 100;
 }
 
@@ -127,11 +128,11 @@ p {
 
 @media (min-width: 992px) {
   .intro .intro-img {
-    width: 75%;
+    max-width: 90%;
     float: left;
   }
   .intro .intro-text {
-    left: 600;
+    left: 350;
     width: 60%;
     margin-top: 3rem;
     background-color: rgba(24, 64, 8);
@@ -148,7 +149,11 @@ p {
 
 @media (min-width: 1200px) {
   .intro .intro-text {
-    width: 45%;
+    left:600;
+    width:46%;
+  }
+  .intro .intro-img{
+    max-width: 75%;
   }
 }
 
