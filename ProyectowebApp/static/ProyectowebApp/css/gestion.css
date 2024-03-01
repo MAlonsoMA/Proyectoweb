@@ -135,7 +135,7 @@ p {
     left: 350;
     width: 60%;
     margin-top: 3rem;
-    background-color: rgba(24, 64, 8);
+    background-color: rgba(24, 64, 8,.9);
     color: cornsilk;
     position: absolute;
   }
@@ -155,6 +155,7 @@ p {
   .intro .intro-img{
     max-width: 75%;
   }
+
 }
 
 .cta {
@@ -234,7 +235,7 @@ p {
 }
 
 .footer {
-   background-color: rgba(24, 64, 8, 0.8);
+   background-color: rgba(24, 64, 8);
 }
 
 

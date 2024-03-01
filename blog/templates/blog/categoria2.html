@@ -1,0 +1,40 @@
+{% extends "ProyectowebApp/base.html" %}
+{%load static %}
+
+{% block content %}
+<div class="container">
+  <section class="page-section clearfix">
+    
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+      {% for post in posts %}  
+      <div class="col">
+        <div class="card h-100">
+          <img src="{{post.imagen.url}}" class="card-img-top" alt="">
+          <div class="card-body-blog">
+            <h5 class="section-heading card-title section-heading-lower">{{post.titulo}}</h5>
+            <p class="section-heading-upper">{{post.contenido}}</p>
+            <div class="intro-autor-blog">
+              Autor: {{post.autor}}
+            </div>
+          </div>
+        </div>
+      </div> 
+      {% endfor %}
+    </div>
+    
+  </section>
+</div>
+
+<section>
+  <div class="categorias-blog">
+    Categorías: |
+    
+    {% for post in posts %}
+      {% for categoria in post.categorias.all %}
+        {{categoria.nombre}} |
+      {% endfor %}
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
+
