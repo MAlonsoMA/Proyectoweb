@@ -1,3 +1,4 @@
+from django import forms
 from django.db import models
 
 from django.contrib.auth.models import User
@@ -16,7 +17,7 @@ class Categoria(models.Model):
 
 class Post(models.Model):
     titulo=models.CharField(max_length=50)
-    contenido=models.CharField(max_length=50)
+    contenido=models.TextField(max_length=250)
     imagen=models.ImageField(upload_to='blog',null=True,blank=True)
     autor=models.ForeignKey(User,on_delete=models.CASCADE)
     categorias=models.ManyToManyField(Categoria)

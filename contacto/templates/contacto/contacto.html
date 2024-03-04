@@ -1,0 +1,28 @@
+{% extends "ProyectowebApp/base.html" %}
+{%load static %}
+
+{% block content %}
+    
+
+<div class="container text-white form-group formulario-contacto">
+    
+    {%if "valido" in request.GET%}
+
+        <div class="confirmacion-envio">
+            Información enviada correctamente. Gracias 
+        </div>
+
+    {%endif%}
+    
+    <form action="" method="POST">
+        {%csrf_token%}
+        <h2 class="text-white titulo-formulario">Formulario contacto</h2>
+        {{miFormulario}}
+        <div class="text-center">
+            <input class="btn btn-success boton-contacto" type="submit" value="Enviar">
+            <input class="btn btn-success boton-contacto" type="reset" value="Borrar">
+        </div>
+    </form>
+</div>
+
+{% endblock %}

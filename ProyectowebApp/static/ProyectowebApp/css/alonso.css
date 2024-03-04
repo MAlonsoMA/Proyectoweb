@@ -1,4 +1,4 @@
-/*elementos BLOG*/
+/*elementos blog*/
 .intro-autor-blog{
     text-align:left;
     font-size: .8em;
@@ -27,34 +27,84 @@
   font-weight: bold;
   text-decoration:none;
 }
+/*fin elementos blog*/
+
+/*elementos Contacto*/
+.formulario-contacto{
+  background-color: rgba(24, 64, 8,.6);
+  margin-top:2em;
+  margin-bottom:1.5em;
+  padding:0.3em 2em .5em 2em;
+}
+.titulo-formulario{
+  padding-top:1em;
+  text-align:center;
+}
+.formulario-contacto label{
+  margin-bottom:0.3em;
+}
+.boton-contacto{
+  margin-right:1em;
+  margin-top:1.3em;
+  border-width: 1px;
+  border-color: rgb(118, 236, 191);
+}
+.btn-success:hover{
+  background-color:white;
+  color:rgba(24, 64, 8);
+  font-weight: bold;
+}
+.confirmacion-envio{
+  text-align: center;
+  font-weight:bold;
+  color:white;
+  padding:0.3em;
+  background-color: #ce901f;
+}
+/*fin elementos contacto*/
 
 @media (min-width: 992px) {
-    .intro .intro-img-blog {
-      max-width:60%;
-      float: left;
-    }
-    .intro .intro-text-blog {
-      left: 350;
-      width: 60%;
-      margin-top: 3rem;
-      background-color: rgba(24, 64, 8,.9);
-      color: cornsilk;
-      position: absolute;
-    }
-    .intro .intro-text-blog .intro-button {
-      width: 100%;
-      left: 0;
-      position: absolute;
-      bottom: -2rem;
-    }
+  .intro .intro-img-blog {
+    max-width:60%;
+    float: left;
   }
-  @media (min-width: 1200px) {
-    .intro .intro-text-blog {
-      left:600;
-      width:46%;
-    }
-    .intro .intro-img-blog{
-      max-width: 60%;
-    }
+  .intro .intro-text-blog {
+    left: 350;
+    width: 60%;
+    margin-top: 3rem;
+    background-color: rgba(24, 64, 8,.9);
+    color: cornsilk;
+    position: absolute;
   }
-  /*fin elementos Blog*/
+  .intro .intro-text-blog .intro-button {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: -2rem;
+  }
+  .formulario-contacto{
+    max-width:70%;
+  }
+}
+@media (min-width: 1200px) {
+  .intro .intro-text-blog {
+    left:600;
+    width:46%;
+  }
+  .intro .intro-img-blog{
+    max-width: 60%;
+  }
+  .formulario-contacto{
+    max-width:65%;
+  }
+}
+@media (min-width: 1200px) {
+  .formulario-contacto{
+    max-width:62%;
+  }
+}
+@media (min-width: 1800px) {
+  .formulario-contacto{
+    max-width:60%;
+  }
+}
