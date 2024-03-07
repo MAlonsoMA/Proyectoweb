@@ -81,17 +81,62 @@
 .producto-nombre{
   display:block;
   color: #ce901f;
-  font-size:1.1em;
+  font-size:1em;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+  margin-bottom:0px;
+  padding-left:0px;
+  padding-right:0px;
 }
 .producto-precio{
+  display:block;
   background-color: #ce901f;
-  font-size:1.6em;
+  font-size:1.3em;
   font-weight: bold;
-  margin-top:-1.25em;
+  padding:6px;
+  margin-top:-1.6em;
+  margin-bottom:.5em;
+}
+.producto-boton{
+  float:right;
+  font-size: .7em;
+  margin:-3px 1px 2px 2px;
+}
+.producto-carro{
+  color:white;
+  margin-top:1.7em;
+  margin-left:0.4em;
 }
 
+
+/*iconos de google*/
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/*Formulario registro*/
+.text-muted{
+  width:100%;
+  display:block;
+  color:cornsilk !important;
+  font-size:.9em;
+  margin:1em auto;
+}
+.btn[name="registro"]{
+  display:block;
+  margin:auto;
+}
+
+@media (min-width:440px){
+  .producto-carro{
+    float:none;
+    width:98%;
+  }
+}
 
 @media (min-width: 992px) {
   .intro .intro-img-blog {
@@ -115,6 +160,16 @@
   .formulario-contacto{
     max-width:70%;
   }
+  .producto-carro{
+    float:right;
+    width:18%;
+  }
+  .text-muted{
+    width:85%;
+  }
+  .container{
+    max-width: 90%;
+  }
 }
 @media (min-width: 1200px) {
   .intro .intro-text-blog {
@@ -132,9 +187,19 @@
   .formulario-contacto{
     max-width:62%;
   }
+  .producto-carro{
+    float:right;
+    width:18%;
+  }
+  .text-muted{
+    width:90%;
+  }
 }
 @media (min-width: 1800px) {
   .formulario-contacto{
     max-width:60%;
+  }
+  .text-muted{
+    width:95%;
   }
 }

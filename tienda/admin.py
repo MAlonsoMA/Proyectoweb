@@ -8,7 +8,7 @@ class CategoriaAdmin(admin.ModelAdmin):
 
 class ProductoAdmin(admin.ModelAdmin):
     readonly_fields=('created','updated')
-    list_display=("nombre","categorias","imagen","precio","created","updated")
+    list_display=("id","nombre","categorias","imagen","precio","created","updated")
     search_fields=("nombre","precio")
     list_filter=("categorias","created")
     date_hierarchy=("created")

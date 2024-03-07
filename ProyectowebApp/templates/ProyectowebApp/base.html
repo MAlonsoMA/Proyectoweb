@@ -11,7 +11,7 @@
      <!-- Fonts -->
      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
      <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
-     
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <!-- Styles -->
     <link href="{% static 'ProyectowebApp/css/alonso.css' %}" rel="stylesheet">
@@ -24,7 +24,15 @@
       
         <span class="site-heading-lower">Gestión de pedidos</span>
       </h1>
-
+    <div style="text-align:right;margin-right:6%;color:white;">
+    
+    {%if user.is_authenticated%}
+      Bienvenid@, {{user.username}}&nbsp;|&nbsp;<a style="color: white;" href="{% url 'cerrar_sesion'%}">Logout</a>
+    {%else%}
+      <a style="color: white;" href="{% url 'logear'%}">Login</a>&nbsp;|&nbsp;<a style="color: white;" href="{% url 'Autenticacion'%}">Registro</a>
+    {%endif%}
+    
+    </div>
 
  <!-- Navbar -->
  <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">

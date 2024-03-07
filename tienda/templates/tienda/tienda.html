@@ -4,6 +4,18 @@
 {% block content %}
 
 <div class="container">
+  <div class="producto-carro">
+  
+    {%if request.user.is_authenticated%}
+      {%include "carro/widget.html"%}
+    {%else%}
+      <div class="alert alert-danger text-center">
+        Login para comprar
+      </div>
+    {%endif%}
+
+
+  </div>
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 mt-2 mb-4 g-4">
 
 {%for producto in productos%}
@@ -12,7 +24,9 @@
       <div class="card h-100 producto-card">
         <img src="{{producto.imagen.url}}">
         <div class="card-body text-center">
-          <p class="card-text producto-precio">{{producto.precio}}&nbsp;€</p>
+          <div class="card-text producto-precio">{{producto.precio}}&nbsp;€
+            <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success producto-boton"><i class="material-symbols-outlined">shopping_cart_checkout</i></a>
+          </div>
           <h7 class="card-title producto-nombre">{{producto.nombre}}</h7>
         </div>
       </div>
