@@ -46,6 +46,16 @@
                 <span style="font-size:1.2em;">Total: {{importe_total_carro}}€</span>
             </td>
         </tr>
+        {%if request.session.carro.items%}
+            <tr>
+                <td colspan="3" class=text-center>
+                
+                    <a href="../pedidos" class="btn btn-success">Hacer pedido</a>
+
+                </td>
+            </tr>
+        {%endif%}
+
     </tfoot>
 
 </table>
